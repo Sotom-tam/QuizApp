@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz_It : Sign_up Page</title>
+    <link rel="stylesheet" href="../css/sign_up.css">
+    
+</head>
+<body>
+    <div class="main">
+        <div id="snackbar"><p class="show"></p></div>
+        <!-- Sir Golden asked me to add a snackbar or toasty instead of using alert boxes -->
+        <div id="form" action="">
+            <div class="content">
+                <h2>Sign Up Here</h2>
+                <p>Please Fill In Your Details and Sign Up</p>
+                <p>
+                    <label for="Surname">Surname:</label><br><input type="text" placeholder="SurName"  id="SurName">
+                </p>
+                <p>
+                    <label for="FirstName">First Name:</label><br><input type="text" placeholder="FirstName" id="FirstName">
+                </p>
+                <p>
+                    <label for="Email">Email:</label><br><input type="email" placeholder="Email"id="Email" >
+                </p>
+                <p>
+                    <label for="Password">Password:</label><br><input type="password" placeholder="Password" id="Password" >
+                </p>  
+                <input type="submit" id="submit" value="Done"onclick=user_data()>
+            </div>
+                
+            <div class="side">
+                <!-- <img src="../images/Logo.svg.svg"> -->
+                <div>
+                    <h1 id="head">Welcome To QUIZIT</h1>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login_page.js"></script>
+</body>
+
+</html>

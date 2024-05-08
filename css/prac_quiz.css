@@ -1,0 +1,425 @@
+@font-face {
+    font-family: Noto_JP;
+    src: url(../font/noto_jp/NotoSansJP-Regular.ttf);
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: Noto_JP,sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/background1.png);
+}
+.main{
+    margin-top: 40px;
+    width: 100%;
+    height:560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .element{
+    padding: 20px;
+    background-color: #757e8d;
+    display: flex;
+    justify-content: space-between;
+    width:45%;
+    border-radius: 20px 20px 0 0;
+}
+.main .element #text{
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+.main .element #text #timer{
+    font-size: 24px;
+
+}
+.main .element .meter meter::-webkit-meter-bar:hover{
+    box-shadow: 0px 0px 5px 5px #380927;
+}
+#label{
+    color:#FFF;
+}
+.main .element .meter meter::-webkit-meter-bar{
+    width:350px;
+    height:30px;
+    color:#757e8d;
+    background-color:#966985 ;
+    border-radius: 5px;
+    border:1px dotted #380927 ;
+    display: flex;
+    transition: 300ms;
+    margin: 0 15px;
+}
+.main .element .meter meter::-webkit-meter-optimum-value{
+    background: linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%);
+    color: #FFF;
+}
+.main .quiz_app{
+    padding: 20px 50px;
+    width:45%;
+    background-color: #FFF;
+    display: flex;
+    flex-flow:column wrap;
+    align-items: flex-start;
+    justify-content: start;
+    height: 470px;
+    border-radius:0 0 10px 10px;
+}
+.main .quiz_app h2{
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 2px solid #380927;
+}
+.main .quiz_app .quiz h3{
+    margin: 5px 0px;
+}
+.main .quiz_app .quiz #answer-buttons{
+    
+}
+.btn{
+    width:100%;
+    margin: 5px 0px;
+    padding: 8px;
+    height:42px;
+    text-align:justify;
+    transition: 400ms;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: white;
+    color: #380927;
+}
+
+.btn:hover{
+    background-color:#380927;
+    color: #FFF;
+}
+#next-btn,#prev-btn{
+    background-color: #380927;
+    width:200px;
+    height:40px;
+    border: none;
+    transition: 400ms;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+}
+#next-btn:hover{
+    background-color: #966985;
+    font-size: 20px;
+    color: #FFF;
+    
+}
+#prev-btn{
+    display: inline;
+    margin: 20px;
+    font-size: 16px;
+}
+#backto_quizcategory{
+    margin: 20px;
+    display: inline;
+    width: 200px;
+    padding: 8px;
+    color: white;
+    background-color: #380927;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#snackbar{ 
+    text-align: center;
+    font-family: AeonikReg,sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color:#966985;
+    border-radius: 10px;
+    color:white;
+    visibility: hidden;
+    position: absolute;
+    margin-left:-200px ;
+    left: 90%;
+    top: 30px;
+    z-index: 2;
+    width: 17%;
+    height:17%;
+    padding: 20px;
+    font-size: 16px;
+}
+#snackbar.show{
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@keyframes fadein {
+    from {top: -50px; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top:-50px; opacity: 0;}
+}
+#timer.red{
+    font-size: 36px;
+    color:red;
+}
+.correct{
+    background-color:rgb(107, 214, 107);
+}
+.incorrect{
+    background: rgb(223, 137, 137);
+}
+@media all and (max-width:1200px) {
+    .main{
+        width: 100%;
+        height:560px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main .element{
+        padding: 20px;
+        background-color: #757e8d;
+        display: flex;
+        justify-content: space-between;
+        width:55%;
+        border-radius: 20px 20px 0 0;
+    }
+    .main .element #text{
+        background-color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .main .element #text #timer{
+        font-size: 24px;
+    
+    }
+    .main .quiz_app{
+        padding: 20px 30px;
+        width:55%;
+        background-color: #FFF;
+        display: flex;
+        flex-flow:column wrap;
+        align-items: flex-start;
+        height: 450px;
+        display: flex;
+        border-radius:0 0 10px 10px;
+    }
+    .main .quiz_app h2{
+        padding: 10px 20px;
+        width: 100%;
+        border-bottom: 2px solid #380927;
+    }
+    .btn{
+        width:90%;
+        margin: 5px 0px;
+        padding: 8px;
+        height:42px;
+        text-align:justify;
+        transition: 400ms;
+        border-radius: 10px;
+        border: 1px solid grey;
+        background-color: white;
+        color: #380927;
+    }
+    
+}
+@media all and (max-width:990px) {
+    .main{
+        width: 100%;
+        height:560px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main .element{
+        padding: 20px;
+        background-color: #757e8d;
+        display: flex;
+        justify-content: space-between;
+        width:60%;
+    }
+    .main .element #text{
+        background-color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .main .element #text #timer{
+        font-size: 24px;
+    
+    }
+    .main .element .meter meter::-webkit-meter-bar{
+        width:280px;
+        height:30px;
+        border-radius: 5px;
+        border:1px dotted #380927 ;
+        display: flex;
+    }
+    .main .quiz_app{
+        padding: 20px 30px;
+        width:60%;
+        background-color: #FFF;
+        display: flex;
+        flex-flow:column wrap;
+        align-items: flex-start;
+        height: 450px;
+        display: flex;
+        border-radius:0 0 10px 10px;
+    }
+    .main .quiz_app h2{
+        padding: 10px 20px;
+        width: 100%;
+        border-bottom: 2px solid #380927;
+        font-size: 22px;
+    }
+    .main .quiz_app .quiz h3{
+        font-size: 16px;
+    }
+    .btn{
+        width:100%;
+        margin: 5px 0px;
+        padding: 8px;
+        height:42px;
+        text-align:justify;
+        transition: 400ms;
+        border-radius: 10px;
+        border: 1px solid grey;
+        background-color: white;
+        color: #380927;
+    }
+    
+}
+@media all and (max-width:712px) {
+    .main .element .meter meter::-webkit-meter-bar{
+        width:230px;
+        height:30px;
+        border-radius: 5px;
+        border:1px dotted #380927 ;
+        display: flex;
+    } 
+}
+@media all and (max-width:650px) {
+    .main{
+        width: 100%;
+        height:560px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main .element{
+        padding: 20px;
+        background-color: #757e8d;
+        display: flex;
+        justify-content: space-between;
+        width:90%;
+    }
+    .main .element #text{
+        background-color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .main .element #text #timer{
+        font-size: 24px;
+    
+    }
+    .main .element .meter meter::-webkit-meter-bar{
+        width:250px;
+        height:30px;
+        border-radius: 5px;
+        border:1px dotted #380927 ;
+        display: flex;
+    }
+    .main .quiz_app{
+        padding: 15px 20px;
+        width:90%;
+        background-color: #FFF;
+        display: flex;
+        flex-flow:column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 900px;
+        display: flex;
+        border-radius:0 0 10px 10px;
+    }
+    .main .quiz_app h2{
+        padding: 10px 20px;
+        width: 100%;
+        border-bottom: 2px solid #380927;
+    }
+    
+}
+@media all and (max-width:540px) {
+    .main{
+        width: 100%;
+        height:560px;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        justify-content: center;
+        padding: 20px;
+    }
+    .main .element{
+        padding: 20px;
+        background-color: #757e8d;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+    }
+    .main .element #text{
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px 0 0;
+        width:50px;
+        height:40px;
+    }
+    .main .element #text #timer{
+        font-size: 18px;
+    }
+    .main .element .meter meter::-webkit-meter-bar{
+        width:200px;
+        height:20px;
+        border-radius: 5px;
+        border:1px dotted #380927 ;
+        display: flex;
+    }
+    .main .quiz_app{
+        padding: 10px 15px;
+        width:100%;
+        background-color: #FFF;
+        display: flex;
+        flex-flow:column wrap;
+        align-items: flex-start;
+        height: 1500px;
+        display: flex;
+        border-radius:0 0 10px 10px;
+    }
+    .main .quiz_app h2{
+        padding: 10px 10px;
+        width: 100%;
+        border-bottom: 2px solid #380927;
+        font-size: 17px;
+    }
+    .main .quiz_app .quiz h3{
+        font-size: 13px;
+    }
+    .btn{
+        width:100%;
+        margin: 5px 0px;
+        padding: 8px;
+        height:42px;
+        text-align:justify;
+        transition: 400ms;
+        border-radius: 10px;
+        border: 1px solid grey;
+        background-color: white;
+        color: #380927;
+    }
+    
+}
+
+

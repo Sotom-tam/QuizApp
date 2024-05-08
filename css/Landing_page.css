@@ -1,0 +1,453 @@
+@font-face {
+    font-family: AeonikReg;
+    src: url(../font/aeonik/AeonikTRIAL-Regular.otf);
+}
+@font-face {
+    font-family: AeonikLight;
+    src: url(../font/aeonik/AeonikTRIAL-Light.otf);
+}
+@font-face {
+    font-family: Header;
+    src: url(../font/noto_jp/NotoSansJP-Regular.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh ;
+    flex-direction:column  ;
+    background-color: white;
+}
+
+.main-container{
+    display: flex;
+    flex:1; 
+    font-family: AeonikReg,sans-serif ;
+    padding: 20px;
+}
+.main-container > .content{
+    flex:1;
+    order:1;
+    background-color: #edd2e0;
+    color: black;
+    padding: 50px 100px;
+    border-radius: 20px;
+    height:75vh;
+    margin: 10px;
+}
+.main-container > .content h1{
+    font-family: Header,sans-serif;
+    color: #380927;
+    font-size: 45px;
+    text-align: center;
+}
+.main-container > .content ul li{
+    font-family:Header,sans-serif ;
+    margin: 15px 10px;
+    font-size: 20px;
+}
+.main-container > .content ul{
+    margin-top:20px ;
+    padding-left: 10px;
+}
+#Get{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: AeonikReg,sans-serif;
+    font-size:20px;
+    color: white;
+    background-color: #380927;
+    text-align: center;
+    border-radius: 30px;
+    margin:20px 30% 10px ;
+    transition: 400ms;
+}
+#Get:hover{
+
+    background-color: #F5F5F5;
+    border: 2px solid #380927;
+    color: #380927;
+    border-radius: 40px;
+}
+.main-container>aside{
+    flex: 0 45vw;
+    height: 75vh;
+    order:2 ;
+    border-radius: 20px;
+    background-image: url(../images/background1.png);
+    color: white;
+    margin:10px;
+}
+.header{
+    background-image: url(../images/background\ 3.jpg) ;
+}
+.footer{
+    background-color:white ;
+    height: 10vh ;
+}
+.logo{
+    flex:1;
+    order:1;
+}
+.logo a{
+    font-family: AeonikReg,sans-serif;
+    padding: 10px;
+    font-size:1.8em;
+    color:#ECEFF1;
+    text-decoration: none;
+}
+.logo a:hover{
+    color: #966985;
+    text-decoration: none;
+    font-size: 2.0em;
+}
+.navBar{
+    list-style-type: none;
+    margin: 0%;
+    padding: 10px;
+}
+.navBar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content:flex-end; */
+}
+.navItem{
+    padding: 10px;
+    text-align: center;
+    display: inline;
+}
+.navItem a{
+    display: block;
+    text-decoration: none;
+    font-family: AeonikReg,sans-serif;
+    font-size:20px;
+    color: white;
+    background-color: #380927;
+    width:100px;
+    height:50px;
+    text-align: center;
+    border-radius: 30px;
+    transition: 400ms;
+    padding:15px;
+}
+.navItem a:hover{
+    background-color:#F5F5F5;
+    border: 1px solid black;
+    color: #380927;
+}
+/* #sign_up{
+    flex: 0 0 20vw;
+    order:3;
+} */
+#login,#sign_up{
+    flex:0 0 14vw;
+    order:2;
+}
+.under{
+    display: flex;
+    justify-content: center;
+    flex-flow:column wrap;
+    padding: 20px;
+    margin: 50px 10% 0px;
+    font-family: Header,sans-serif;
+    background-color: #edd2e0;
+    padding:10px;
+    width:80vw;
+    height:50vw;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+.under .categories{
+    margin:20px 25% 0px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width:50%;
+    padding: 20px 0px;
+    height: 40vh;
+    border-radius: 20px;
+    box-shadow:5px 5px 5px #380927;
+    overflow: hidden;
+    background-color:#180210;
+}
+.under .categories .slide{
+    display: flex;
+    border: 2px solid grey;
+    border-radius: 20px;
+    width:80%;
+    padding: 20px;
+    height:85%;
+    background-color: #966985;
+    margin: 0 10%;
+    overflow: hidden;
+}
+.under .categories .slide img{
+    width: 40%;
+    height:80%;
+    order: 2;
+}
+.under .categories .slide p{
+    flex:1;
+    order:1;
+    font-family: Header,sans-serif;
+    color:white;
+    font-size: 30px;
+}
+.under h2{
+    font-family: Header,sans-serif;
+    font-size: 34px;
+    color:#380927;
+}
+#prev,#next{
+    position: absolute;
+    padding:5px;
+    width:150px;
+    height:150px;
+    transform: rotate(180deg) translate(380px,32vh);
+    cursor: pointer;
+    border-radius: 20px;
+}
+#next{
+    transform:translate(222px,-32vh);
+
+}
+#next:hover,#prev:hover{
+    width:160px;
+    height:160px;
+    background-color: #ad99a3;
+}
+/* This is for screens 380 to 600*/
+@media all and (max-width:770px){
+    .navBar{
+        position:relative;
+        flex-wrap: wrap;
+    }
+    .navItem a{
+        font-size: 6px;
+        width: 60px;
+        height: 30px;
+        display: block; 
+    }
+    .main-container{
+        flex-direction:column ;
+    }
+    .main-container > .content{
+        padding: 30px 15px;
+    }
+    
+    .main-container>aside{
+        flex: 0 60vw;
+        order:2 ;
+    }
+    .navItem a{
+        padding: 10px 10px;
+        font-size:12px;
+    }
+    #Get{
+        padding: 10px 5px;
+        font-size:15px;
+        width:10vw;
+        height:5vh;
+        border-radius: 30px;
+        margin:0 10% 0 ;
+    }
+}
+/* For screens 380 below*/
+@media all and (max-width:378px){
+    #Get{
+        padding: 10px 5px;
+        font-size:15px;
+        width:10vw;
+        height:5vh;
+        border-radius: 30px;
+        margin:0 10% 0 ;
+    }
+    .main-container > .content{
+        padding:10px;
+        height:200vh;
+        margin: 10px;
+    }
+    .navItem a{
+        font-size:16px;
+        padding: 5px;
+    }
+    .navBar .logo a{
+        font-size: 20px;
+    }
+}
+@media all and (max-width:902px){
+    .navItem a{
+        font-size: 16px;
+        padding: 10px;
+        width: 100px;
+    }
+    #Get{
+        padding: 10px 10px;
+        font-size:15px;
+        border-radius: 30px;
+        margin:10px 10% 10px ;
+    }
+    .main-container > .content{
+        padding: 30px 10px;
+        height:100vh;
+    }
+    .main-container > aside{
+        height:80vh;
+    }
+    .navItem a{
+        font-size:20px;
+        color: white;
+        width:100px;
+        height:50px;
+        text-align: center;
+        border-radius: 30px;
+        transition: 400ms;
+        padding:10px;
+    }
+}
+@media all and (max-width:1202px){
+    .navItem a{
+        font-size: 16px;
+        padding: 10px;
+        width: 100px;
+    }
+    #Get{
+        padding: 10px 10px;
+        font-size:15px;
+        border-radius: 30px;
+        margin:10px 10% 10px ;
+    }
+    .main-container > .content{
+        padding: 30px 10px;
+        height:80vh;
+    }
+    .main-container > aside{
+        height:80vh;
+    }
+    .navItem a{
+        font-size:20px;
+        color: white;
+        width:100px;
+        height:50px;
+        text-align: center;
+        border-radius: 30px;
+        transition: 400ms;
+        padding:10px;
+    }
+}
+/*Media queries For Second part*/
+/*screen sizes 1115px are good*/
+@media all and (max-width:902px){
+    .under .categories .slide p{
+        font-size: 26px;
+    }
+    .under h2{
+        font-size: 26px;
+    }
+    #prev,#next{
+        padding:5px;
+        width:120px;
+        height:120px;
+        transform: rotate(180deg) translate(270px,32vh);
+        border-radius: 20px;
+    }
+    #next{
+        transform:translate(160px,-32vh);
+    
+    }
+}
+@media all and (max-width:770px){
+    .under{
+        flex-direction: row;
+        height:80vh;
+    }
+    .under h2{
+        font-size: 24px;
+    }
+    #prev,#next{
+        padding:5px;
+        width:100px;
+        height:100px;
+        transform: rotate(180deg) translate(75vw,-10vh);
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    #next{
+        transform:translate(-110px,10vh);
+    
+    }
+    .under .categories{
+        margin:20px 25% 0px;
+        width:50%;
+        padding: 20px 0px;
+        height: 40vh;
+        border-radius: 20px;
+    }
+    .under .categories .slide{
+        border-radius: 20px;
+        width:80%;
+        padding: 5px;
+        height:85%;
+        margin: 0 10%;
+        font-size: 22px;
+    }
+}
+@media all and (max-width:690px){
+    .under{
+        height:60vh;
+    }
+    .under .categories{
+        margin:20px 25% 0px;
+        width:50%;
+        padding: 10px 0px;
+        height: 28vh;
+        border-radius: 20px;
+    }
+    .under .categories .slide{
+        border-radius: 20px;
+        width:60%;
+        padding: 5px;
+        height:60%;
+        margin: 0 8%;
+        font-size: 22px;
+    }
+    .under .categories .slide p{
+        font-size: 16px;
+    }
+    .under .categories .slide img{
+        width: 60px;
+        height:60px;
+    }
+}
+@media all and (max-width:490px){
+    #prev,#next{
+        padding:5px;
+        width:60px;
+        height:60px;
+        transform: rotate(180deg) translate(37vw,22vh);
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    #next{
+        transform:translate(20vw,-22vh);
+    
+    }
+    .under .categories{
+        width:80%;
+    }
+    .under .categories .slide{
+        padding:10px;
+        flex-direction: column;
+        width:80%;
+        height:80%;
+    }
+    .under .categories .slide p{
+        font-size: 10px;
+    }
+
+}

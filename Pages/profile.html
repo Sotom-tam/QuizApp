@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz_It! : User Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body onload="onload()">
+    <div class="main">
+        <div id="snackbar"><p class="show"></p></div>
+        <!-- Sir Golden asked me to add a snackbar or toasty instead of using alert boxes -->
+        <div id="form" action="">
+            <div class="content">
+                <h2>Profile</h2>
+                <p></p>
+                <p>
+                    <label for="Surname">Surname:</label><br><input type="text" placeholder="SurName"  id="SurName">
+                </p>
+                <p>
+                    <label for="FirstName">First Name:</label><br><input type="text" placeholder="FirstName" id="FirstName">
+                </p>
+                <p>
+                    <label for="Email">Email:</label><br><input type="email" placeholder="Email"id="Email" >
+                </p> 
+                <p>
+                    <label for="DOB">Date Of Birth:</label><br><input type="date" id="DOB" placeholder="MM/DD/YYYY">
+                </p> 
+                <p>
+                    <label for="score">Latest Score:</label><br><input readonly type="text" id="score" value="NA">
+                </p> 
+                <input type="submit" id="submit" value="Save"onclick=saveData()>
+            </div>
+                
+            <div class="side">
+                <!-- <img src="../images/Logo.svg.svg"> -->
+                <div>
+                    <h1 id="head">QUIZIT Profile</h1>
+                    <p>Hello <span id="Name">Name</span></p>
+                    <a id="back" href="../Pages/quiz_categories.html">Back<img src="../images/logout.svg"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="profile">
+        <input value="Sotom">
+    </div> -->
+    <!-- <button onclick="profile()">Press Me</button> -->
+    <script src="../js/profile.js"></script>
+</body>
+</html>

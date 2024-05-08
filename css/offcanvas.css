@@ -1,0 +1,17 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+
+}
+.main .offcanvas{
+    background-color: grey;
+    height: 100%;
+    width:250px;
+    z-index: -1;
+    position: absolute;
+}

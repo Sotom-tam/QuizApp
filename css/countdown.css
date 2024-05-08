@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+    width:100%;
+    background-image:url(../images/background1.png);
+}
+.container .count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height:300px;
+    border-radius: 150px;
+    border: 10px solid white;
+}
+.container .count p{
+    font-size: 200px;
+    color:white;
+    font-weight: 500;
+}
